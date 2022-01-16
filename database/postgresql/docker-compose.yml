@@ -1,0 +1,15 @@
+version: "3"
+services:
+    db:
+        image: postgres:latest
+        container_name: postgres
+        restart: always
+        ports:
+            - "5432:5432"
+        environment:
+            LC_ALL: C.UTF-8
+            POSTGRES_DB: testent
+            POSTGRES_USER: kyh0703
+            POSTGRES_PASSWORD: 123qwe
+        volumes:
+            - ./data/:/var/lib/postgresql/data
